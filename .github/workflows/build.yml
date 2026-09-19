@@ -9,9 +9,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     
-    # ✨ Node 20 deprecation warning/error ကို ကျော်လွန်ရန် ထည့်သွင်းပေးခြင်း
     env:
-      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout repository
@@ -26,7 +25,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.x'
+          flutter-version: '3.47.5'
           channel: 'stable'
           cache: true
 
