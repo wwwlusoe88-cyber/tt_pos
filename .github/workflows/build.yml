@@ -8,6 +8,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    # ✨ Node 20 deprecation warning/error ကို ကျော်လွန်ရန် ထည့်သွင်းပေးခြင်း
+    env:
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
 
     steps:
       - name: Checkout repository
